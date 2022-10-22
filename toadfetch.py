@@ -143,7 +143,7 @@ elif total_time_short_int >= 00.080000 and total_time_short_int <= 00.299999:
 elif total_time_short_int >= 00.300000 and total_time_short_int <= 00.999999:
     total_time_desc = Fore.YELLOW + "sluggish" + Fore.RESET
 else:
-    total_time_desk = Fore.RED + "too slow" + Fore.RESET
+    total_time_desc = Fore.RED + "too slow" + Fore.RESET
 
 print("     ", split_image[13], Fore.YELLOW + "\033[3m  speed:   "  + Style.RESET_ALL + Style.BRIGHT + Fore.LIGHTYELLOW_EX + total_time_short + " seconds" + " (" + total_time_desc + Fore.YELLOW + ")" + Style.RESET_ALL)
 print("     ", split_image[14])
