@@ -10,7 +10,6 @@ from command import run
 from json import loads
 from os import environ, path
 from colorama import Fore, Style
-import images
 
 # Get distro
 try:
