@@ -69,7 +69,6 @@ echo -e "\033[32;1m(i) catimg was already installed or it installed successfully
 echo -e "\033[34;1m(i) Creating neccessary directories..."
 mkdir -p /usr/share/toadfetch/
 echo -e "\033[34;1m(i) Downloading toadfetch..."
-echo -e -n "\033[31;1m"
 git clone --depth=1 https://github.com/Capta1nT0ad/toadfetch /usr/share/toadfetch
 if [ $? == 0 ];
         then
