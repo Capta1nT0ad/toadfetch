@@ -32,7 +32,7 @@ cpu = cpu_number + "-core " + cpu_architecture + cpu_vendor + " CPU at " + cpu_f
 # Get image output from catimg
 if "Arch Linux" in distro:
     if cpu_vendor == " Apple":
-        split_image = run(["catimg", "/usr/share/toadfetch/images/asahilinux.png", "-H", "32", "-r", "2"]).output.decode()
+        image = run(["catimg", "/usr/share/toadfetch/images/asahilinux.png", "-H", "32", "-r", "2"]).output.decode()
     else:
         image = run(["catimg", "/usr/share/toadfetch/images/archlinux.png", "-H", "32", "-r", "2"]).output.decode()
 elif "Mint" in distro:
