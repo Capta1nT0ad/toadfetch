@@ -23,8 +23,8 @@ if distro == "null":
 
 # Get CPU info
 cpu_info_full = run(["lscpu"]).output.decode().splitlines()
-cpu_architecture = cpu_info_full[0].removeprefix("Architecture:                    ")
-cpu_number = cpu_info_full[3].removeprefix("CPU(s):                         ")
+cpu_architecture = run(["uname", "-m"]).output.decode()
+cpu_number = run(["grep" , "-c", "^processor", "/proc/cpuinfo"]).output.decode()
 cpu_vendor = cpu_info_full[5].removeprefix("Vendor ID:                      ")
 cpu_freq = str(float(run(["cat", "/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq"]).output.decode()) / 1000000)
 cpu = cpu_number + "-core " + cpu_architecture + cpu_vendor + " CPU at " + cpu_freq + " GHz"
@@ -122,7 +122,7 @@ print("     ", split_image[2], " ", Style.BRIGHT + Fore.BLUE + username + Style.
 print("     ", split_image[3], Fore.LIGHTBLACK_EX + "  ⎯⎯⎯⎯" + Fore.RED + "⎯⎯⎯⎯" + Fore.GREEN + "⎯⎯⎯⎯" + Fore.YELLOW + "⎯⎯⎯⎯" + Fore.BLUE + "⎯⎯⎯⎯" + Fore.MAGENTA + "⎯⎯⎯⎯" + Fore.CYAN + "⎯⎯⎯⎯" + Fore.WHITE + "⎯⎯⎯⎯")
 print("     ", split_image[4], Fore.GREEN + "\033[3m  distro:  " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + distro + Style.RESET_ALL)
 print("     ", split_image[5], Fore.GREEN + "\033[3m  model:   " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + model + Style.RESET_ALL)
-print("     ", split_image[6], Fore.GREEN + "\033[3m  cpu:    " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + cpu + Style.RESET_ALL)
+print("     ", split_image[6], Fore.GREEN + "\033[3m  cpu:     " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + cpu + Style.RESET_ALL)
 print("     ", split_image[7], Fore.GREEN + "\033[3m  memory:  " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN +  memory + Style.RESET_ALL)
 print("     ", split_image[8], Fore.GREEN + "\033[3m  kernel:  " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + kernel + Style.RESET_ALL)
 if wm == de:
