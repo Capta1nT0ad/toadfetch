@@ -27,7 +27,10 @@ cpu_architecture = run(["uname", "-m"]).output.decode()
 cpu_number = run(["grep" , "-c", "^processor", "/proc/cpuinfo"]).output.decode()
 cpu_vendor = cpu_info_full[5].removeprefix("Vendor ID:                      ")
 cpu_freq = str(float(run(["cat", "/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq"]).output.decode()) / 1000000)
-cpu = cpu_number + "-core " + cpu_architecture + cpu_vendor + " CPU at " + cpu_freq + " GHz"
+if "Model name" in cpu_info_full[7]:
+    cpu = cpu_number + "-core " + cpu_info_full[7].removeprefix("Model name:                      ")
+else:
+    cpu = cpu_number + "-core " + cpu_architecture + cpu_vendor + " CPU at " + cpu_freq + " GHz"
 
 # Get image output from catimg
 if "Arch Linux" in distro:
