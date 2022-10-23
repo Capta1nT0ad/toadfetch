@@ -25,9 +25,13 @@ toadfetch
 
 ### Bugs
 Here are all known issues for `toadfetch`. Please open an issue if you are facing an issue and it is not listed here.
+
 **Active**
+
 - One some devices, the CPU field has garbage info. I'm working on fixing this.
+
 **Fixed**
+
 - If `toadfetch` took more than 1 second, it would throw an error.
 
 ### License
