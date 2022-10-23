@@ -34,6 +34,7 @@ Here are all known issues for `toadfetch`. Please open an issue if you are facin
 
 - If `toadfetch` took more than 1 second, it would throw an error.
 
+
 ### License
 `toadfetch` is licesned under the GNU General Public License v3 or later.
 ```
