@@ -108,10 +108,15 @@ memory = str(memory_used_int_mb) + " MB / " + str(memory_total) + " MB"
 
 # Get desktop Environment
 de = environ.get('XDG_CURRENT_DESKTOP')
+if de == "":
+    de = "Unknown"
 
 # Get window manager
-wm_pretty_full = run(["wmctrl", "-m"]).output.decode().splitlines()
-wm = wm_pretty_full[0].removeprefix("Name: ")
+try:
+    wm_pretty_full = run(["wmctrl", "-m"]).output.decode().splitlines()
+    wm = wm_pretty_full[0].removeprefix("Name: ")
+except:
+    wm = "Unknown"
 
 # Get GTK theme
 theme_pretty = run(["gsettings", "get", "org.gnome.desktop.interface", "icon-theme"]).output.decode()
