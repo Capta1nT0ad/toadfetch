@@ -33,7 +33,10 @@ Here are all known issues for `toadfetch`. Please open an issue if you are facin
 **Fixed**
 
 - If `toadfetch` took more than 1 second, it would throw an error.
+- Custom images wouldn't work because of a refernce to a file path only used in development :)
 
+### Custom Images
+To display custom images in `toadfetch`, it must be a PNG image. Simply rename it to `custom.png` and copy it to `/usr/share/toadfetch/images/custom.png`. Please note that `toadfetch` may be a little bit slower when using custom images as it does not have the image predefined in the code and needs to use `catimg` to generate it on the fly.
 
 ### License
 `toadfetch` is licesned under the GNU General Public License v3 or later.
