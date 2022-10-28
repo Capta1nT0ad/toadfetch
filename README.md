@@ -38,6 +38,13 @@ Here are all known issues for `toadfetch`. Please open an issue if you are facin
 ### Custom Images
 To display custom images in `toadfetch`, it must be a PNG image. Simply rename it to `custom.png` and copy it to `/usr/share/toadfetch/images/custom.png`. Please note that `toadfetch` may be a little bit slower when using custom images as it does not have the image predefined in the code and needs to use `catimg` to generate it on the fly.
 
+### Tips
+##### 1. Wrapping
+You may want to add this alias to your `~/.zshrc` or `~/.bashrc` (depending on the shell you use) to disable 'wrapping' (go to the next line) text when `toadfetch`'s output is too large to fit in the terminal.
+```bash
+alias toadfetch="(tput rmam; toadfetch; tput smam)"
+```
+
 ### License
 `toadfetch` is licesned under the GNU General Public License v3 or later.
 ```
