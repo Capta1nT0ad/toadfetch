@@ -1,21 +1,4 @@
 echo -e "\033[34;1m(i) toadfetch Installer, (c) 2022 Capta1nT0ad."
-echo "(i) Checking python version..."
-PYVER=$(python3 --version | cut --characters=8-14)
-SUPPORTEDPYVER="3.9.0"
-if [ $? == 0 ];
-then
-        echo -n ""
-else
-        echo -e "\033[31;1m(E) It looks like Python is not installed. Please install it through your package manager or <https://python.org>."
-        exit
-fi
-if [ "$(printf '%s\n' "$SUPPORTEDPYVER" "$PYVER" | sort -V | head -n1)" = "$SUPPORTEDPYVER" ]
-then
-        echo -n ""
-else
-        echo -e "\033[31;1m(E) It looks like your Python version is too old. toadfetch only supports Python 3.9 or later. Install the latest version through your package manager or get it from <https://python.org>."
-        exit
-fi
 echo -e '\033[34;1m(i) Installing python dependencies...'
 echo -e "     - Installing 'command'..."
 python3 -m pip install command 1> /dev/null
