@@ -110,6 +110,8 @@ memory = str(memory_used_int_mb) + " MB / " + str(memory_total) + " MB"
 de = environ.get('XDG_CURRENT_DESKTOP')
 if de == "":
     de = "Unknown"
+if str(type(de)) == "<class 'NoneType'>":
+    de = "Unknown"
 
 # Get window manager
 try:
