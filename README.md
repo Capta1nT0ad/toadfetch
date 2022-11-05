@@ -4,6 +4,8 @@
 
 You might have heard of a program called `neofetch` before. It fetches information about your hardware, and displays that information in a pretty way. But, it has one problem: It's very slow! Even on fast hardware, it can take over 2 seconds to run, compared to `toadfetch`'s timings coming in at under 0.04 seconds. `toadfetch` is an alternative to `neofetch` written in Python 3, and is arguably prettier than `neofetch`.
 
+##### If you want something exactly like [`neofetch`](https://github.com/dylanaraps/neofetch) and slightly faster than `toadfetch`, check out [`fastfetch`](https://github.com/LinusDierheimer/fastfetch).
+
 ### Screenshots
 ![toadfetch](assets/toadfetch_1.png)
 
