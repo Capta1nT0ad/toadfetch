@@ -156,5 +156,6 @@ else:
 print("     ", split_image[13], Fore.YELLOW + "\033[3m  speed:   "  + Style.RESET_ALL + Style.BRIGHT + Fore.LIGHTYELLOW_EX + total_time_short + " seconds" + " (" + total_time_desc + Fore.YELLOW + ")" + Style.RESET_ALL)
 print("     ", split_image[14])
 print("     ", split_image[15], "\n")
+print('\033[?25h', end="")
 
 
