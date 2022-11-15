@@ -126,22 +126,22 @@ theme = theme_pretty.removeprefix("'").removesuffix("'")
 
 
 # Start output
-print("\n     ", split_image[0])
-print("     ", split_image[1])
-print("     ", split_image[2], " ", Style.BRIGHT + Fore.BLUE + username + Style.RESET_ALL + " on " + Style.BRIGHT + Fore.BLUE + hostname)
-print("     ", split_image[3], Fore.LIGHTBLACK_EX + "  ⎯⎯⎯⎯" + Fore.RED + "⎯⎯⎯⎯" + Fore.GREEN + "⎯⎯⎯⎯" + Fore.YELLOW + "⎯⎯⎯⎯" + Fore.BLUE + "⎯⎯⎯⎯" + Fore.MAGENTA + "⎯⎯⎯⎯" + Fore.CYAN + "⎯⎯⎯⎯" + Fore.WHITE + "⎯⎯⎯⎯")
-print("     ", split_image[4], Fore.GREEN + "\033[3m  distro:  " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + distro + Style.RESET_ALL)
-print("     ", split_image[5], Fore.GREEN + "\033[3m  model:   " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + model + Style.RESET_ALL)
-print("     ", split_image[6], Fore.GREEN + "\033[3m  cpu:     " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + cpu + Style.RESET_ALL)
-print("     ", split_image[7], Fore.GREEN + "\033[3m  memory:  " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN +  memory + Style.RESET_ALL)
-print("     ", split_image[8], Fore.GREEN + "\033[3m  kernel:  " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + kernel + Style.RESET_ALL)
+print("\n    ", split_image[0])
+print("    ", split_image[1])
+print("    ", split_image[2], " ", Style.BRIGHT + Fore.BLUE + username + Style.RESET_ALL + " on " + Style.BRIGHT + Fore.BLUE + hostname)
+print("    ", split_image[3], Fore.LIGHTBLACK_EX + "  ⎯⎯⎯⎯" + Fore.RED + "⎯⎯⎯⎯" + Fore.GREEN + "⎯⎯⎯⎯" + Fore.YELLOW + "⎯⎯⎯⎯" + Fore.BLUE + "⎯⎯⎯⎯" + Fore.MAGENTA + "⎯⎯⎯⎯" + Fore.CYAN + "⎯⎯⎯⎯" + Fore.WHITE + "⎯⎯⎯⎯")
+print("    ", split_image[4], Fore.GREEN + "\033[3m  distro:  " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + distro + Style.RESET_ALL)
+print("    ", split_image[5], Fore.GREEN + "\033[3m  model:   " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + model + Style.RESET_ALL)
+print("    ", split_image[6], Fore.GREEN + "\033[3m  cpu:     " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + cpu + Style.RESET_ALL)
+print("    ", split_image[7], Fore.GREEN + "\033[3m  memory:  " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN +  memory + Style.RESET_ALL)
+print("    ", split_image[8], Fore.GREEN + "\033[3m  kernel:  " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + kernel + Style.RESET_ALL)
 if wm == de:
-    print("     ", split_image[9], Fore.GREEN + "\033[3m  de:      " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + de + Style.RESET_ALL)
+    print("    ", split_image[9], Fore.GREEN + "\033[3m  de:      " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + de + Style.RESET_ALL)
 else:
-    print("     ", split_image[9], Fore.GREEN + "\033[3m  de:      " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + de + " on " + wm + Style.RESET_ALL)
-print("     ", split_image[10], Fore.GREEN + "\033[3m  theme:   " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + theme + Style.RESET_ALL)
-print("     ", split_image[11], Fore.GREEN + "\033[3m  uptime:  " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + uptime + Style.RESET_ALL)
-print("     ", split_image[12])
+    print("    ", split_image[9], Fore.GREEN + "\033[3m  de:      " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + de + " on " + wm + Style.RESET_ALL)
+print("    ", split_image[10], Fore.GREEN + "\033[3m  theme:   " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + theme + Style.RESET_ALL)
+print("    ", split_image[11], Fore.GREEN + "\033[3m  uptime:  " + Style.RESET_ALL + Style.BRIGHT + Fore.CYAN + uptime + Style.RESET_ALL)
+print("    ", split_image[12])
 end_time = monotonic()
 total_time_full = str(timedelta(seconds=end_time - start_time))
 total_time_short = total_time_full.removeprefix("0:00:")
@@ -155,9 +155,9 @@ elif total_time_short_int >= 00.300000 and total_time_short_int <= 00.999999:
 else:
     total_time_desc = Fore.RED + "too slow" + Fore.RESET
 
-print("     ", split_image[13], Fore.YELLOW + "\033[3m  speed:   "  + Style.RESET_ALL + Style.BRIGHT + Fore.LIGHTYELLOW_EX + total_time_short + " seconds" + " (" + total_time_desc + Fore.YELLOW + ")" + Style.RESET_ALL)
-print("     ", split_image[14])
-print("     ", split_image[15], "\n")
+print("    ", split_image[13], Fore.YELLOW + "\033[3m  speed:   "  + Style.RESET_ALL + Style.BRIGHT + Fore.LIGHTYELLOW_EX + total_time_short + " seconds" + " (" + total_time_desc + Fore.YELLOW + ")" + Style.RESET_ALL)
+print("    ", split_image[14])
+print("    ", split_image[15], "\n")
 print('\033[?25h', end="")
 
 
