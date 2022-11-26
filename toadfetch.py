@@ -24,7 +24,7 @@ if distro == "null":
 # Get CPU info
 cpu_info_full = run(["lscpu"]).output.decode().splitlines()
 cpu_architecture = run(["uname", "-m"]).output.decode()
-cpu_number = run(["grep" , "-c", "^processor", "/proc/cpuinfo"]).output.decode()
+cpu_number = run(["nproc"]).output.decode()
 cpu_vendor = cpu_info_full[5].removeprefix("Vendor ID:                      ")
 cpu_freq = str(float(run(["cat", "/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq"]).output.decode()) / 1000000)
 if "Model name" in cpu_info_full[7]:
