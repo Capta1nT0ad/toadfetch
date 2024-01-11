@@ -1,4 +1,4 @@
-echo -e "\033[34;1m(i) toadfetch Installer, (c) 2022 Capta1nT0ad."
+echo -e "\033[34;1m(i) toadfetch Installer, (c) 2023 Capta1nT0ad."
 echo -e '\033[34;1m(i) Installing python dependencies...'
 echo -e "     - Installing 'command'..."
 python3 -m pip install command 1> /dev/null
