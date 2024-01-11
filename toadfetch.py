@@ -96,9 +96,9 @@ memory_total_pretty = memory_pretty_split[0]
 memory_total = int(memory_total_pretty.removeprefix("MemTotal:        ").removesuffix(" kB")) / 1000
 
 # Used memory
-memory_used_pretty = memory_pretty_split[2]
+memory_used_pretty = memory_pretty_split[1]
 
-memory_used_str = memory_used_pretty.removeprefix("MemAvailable:    ").removesuffix(" kB")
+memory_used_str = memory_used_pretty.removeprefix("MemFree:    ").removesuffix(" kB")
 
 memory_used_int_kb = int(memory_used_str)
 memory_used_int_mb = memory_used_int_kb / 1000
