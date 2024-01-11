@@ -51,7 +51,7 @@ alias toadfetch="(tput rmam; toadfetch; tput smam)"
 `toadfetch` is licesned under the GNU General Public License v3 or later.
 ```
 toadfetch, a superfast alternative to neofetch
-Copyright (C) 2023 Capta1nT0ad
+Copyright (C) 2024 Capta1nT0ad
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
